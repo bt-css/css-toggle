@@ -1,0 +1,53 @@
+:root {
+    --primary-color: #FFFFFF;
+    --secondary-color: #565655;
+    --body-color: #ecc4c4;
+}
+
+html {
+    background: var(--body-color);
+}
+  
+.container {
+    position: absolute;
+    top: 40%; right: 0; bottom: 0; left: 0;
+    margin: auto;
+    text-align: center;
+}
+  
+/***************************** Switch *******************************/
+
+.switch input {
+    position: absolute;
+    opacity: 0;
+}
+  
+/**
+* 1. Adjust this to size
+*/
+  
+.switch {
+    display: inline-block;
+    font-size: 20px; /* 1 */
+    height: 6em;
+    width: 12em; /* width need to be double of its height */
+    border-radius: 6em;
+    background: var(--secondary-color);
+}
+  
+.switch div {
+    height: 6em;
+    width: 6em;
+    border-radius: 6em;
+    background: var(--primary-color);
+    box-shadow: 0 0.1em 0.3em rgba(0,0,0,0.3);
+    -webkit-transition: all 300ms;
+        -moz-transition: all 300ms;
+            transition: all 300ms;
+}
+  
+.switch input:checked + div {
+    -webkit-transform: translate3d(100%, 0, 0);
+        -moz-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+}
